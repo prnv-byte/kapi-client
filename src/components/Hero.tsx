@@ -1,23 +1,39 @@
+"use client";
+import { motion } from "framer-motion";
+import Link from "next/link";
+
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center text-center px-4 pt-24 pb-16">
-      <div className="max-w-4xl mx-auto animate-fade-up">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-ink leading-tight">
+    <section className="min-h-[90vh] flex items-center justify-center text-center">
+      <div className="max-w-4xl mx-auto glass p-12">
+
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           The Scene Within
-        </h1>
-        <p className="text-xl md:text-2xl text-ink/70 mt-6 max-w-2xl mx-auto">
-          a quiet space for the thoughts you don’t always understand,
-          <br />
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mt-6 text-lg text-ink/70"
+        >
+          A quiet space for the thoughts you don’t always understand,
           but feel deeply anyway.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-          <a href="/about" className="btn-secondary">
-            explore your inner world
-          </a>
-          <a href="/booking" className="btn-primary">
-            book a session
-          </a>
+        </motion.p>
+
+        <div className="flex gap-6 justify-center mt-10 flex-wrap">
+          <Link href="/about" className="btn-secondary">
+            Explore
+          </Link>
+          <Link href="/booking" className="btn-primary">
+            Book Session
+          </Link>
         </div>
+
       </div>
     </section>
   );

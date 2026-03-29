@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { NoiseBackground } from "@/components/NoiseBackground";
+import FloatingParticles from "@/components/FloatingParticles";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -28,6 +29,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
       <body className="antialiased">
+        <div className="ambient-bg" />
+        <FloatingParticles />
         <NoiseBackground />
         <div className="relative z-10">{children}</div>
       </body>

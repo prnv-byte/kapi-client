@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,11 +31,17 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <Link
-            href="/"
-            className="text-2xl font-light tracking-tight text-ink hover:text-purple-deep transition-colors font-fraunces"
-          >
-            the scene within
+          <Link href="/" className="flex items-center gap-3 text-2xl font-light tracking-tight text-ink hover:text-purple-deep transition-colors font-fraunces">
+            <div className="relative w-10 h-10">
+              <Image
+                src="/logo.png"
+                alt="Kapi logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            <span>the scene within</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
