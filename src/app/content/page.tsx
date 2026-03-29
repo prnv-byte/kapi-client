@@ -45,9 +45,9 @@ export default function ContentPage() {
   return (
     <>
       <Navbar />
-      <main className="relative z-10 pt-32 pb-20 px-4 max-w-5xl mx-auto">
+      <main className="relative z-10 pt-32 pb-20 px-4 max-w-5xl mx-auto bg-gradient-to-b from-[#e6dcff] to-[#d7c8ff]">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-light text-ink">
+          <h1 className="text-4xl md:text-5xl font-light text-[#111821]">
             thoughts, patterns, and quiet realisations —
             <br />
             in words.
@@ -61,8 +61,8 @@ export default function ContentPage() {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-full text-sm transition-all ${
                 activeCategory === cat
-                  ? "bg-purple-deep text-white"
-                  : "bg-white/50 text-ink hover:bg-white/80"
+                  ? "bg-[#5a1fa5] text-white"
+                  : "bg-white/50 text-[#111821] hover:bg-white/80"
               }`}
             >
               {cat}
@@ -74,9 +74,9 @@ export default function ContentPage() {
           {contentMap[activeCategory].map((item, idx) => (
             <div
               key={idx}
-              className="glass-card glass-card-hover p-6"
+              className="glass-card glass-card-hover p-6 bg-white shadow-sm"
             >
-              <p className="text-ink/80 leading-relaxed">{item}</p>
+              <p className="text-[#111821]/80 leading-relaxed">{item}</p>
             </div>
           ))}
         </div>

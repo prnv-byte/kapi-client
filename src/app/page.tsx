@@ -1,11 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import OpeningReflection from "@/components/OpeningReflection";
-import WhatThisIs from "@/components/WhatThisIs";
-import WhatYouFind from "@/components/WhatYouFind";
-import ServicesPreview from "@/components/ServicesPreview";
-import ClosingLine from "@/components/ClosingLine";
 import Footer from "@/components/Footer";
+import About from "@/components/About";
+import FAQ from "@/components/FAQ";
+import ContentSections from "@/components/ContentSections";
 
 export default function Home() {
   return (
@@ -13,11 +11,9 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <OpeningReflection />
-        <WhatThisIs />
-        <WhatYouFind />
-        <ServicesPreview />
-        <ClosingLine />
+        <About />
+        <ContentSections />
+        <FAQ />
       </main>
       <Footer />
     </>
