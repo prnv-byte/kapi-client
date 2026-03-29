@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "The Scene Within | Dr. Maya Reynolds",
+  title: "The Scene Within ",
   description: "A quiet space for the thoughts you don't always understand, but feel deeply anyway.",
 };
 
